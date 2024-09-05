@@ -1,0 +1,8 @@
+Array List
+List<Integer> list = new ArrayList<>();
+To add : list.add(10); list.add(20);....
+To add : list = Arrays.asList(10,20,30,....);
+Methods:
+to sort an array - arr : Arrays.sort(arr)
+to sort an array in a fixed index exclusively : Arrays.sort(arr,fromIndex,toIndex);
+to print the array : Arrays.toString(arr)
