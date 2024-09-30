@@ -13,6 +13,7 @@ public class RemoveDuplicatesFromSortedArray {
         for (int k = 0; k <= i+1; k++) {
             System.out.print(arr[k] + " ");
         }
+        // removeDuplicates(arr);
     }
     // public static int removeDuplicates(int[] arr) {
     //     HashSet<Integer> set = new HashSet<>();
