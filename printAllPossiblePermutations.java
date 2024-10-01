@@ -2,7 +2,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class printAllPossiblePermutations {
-    // public class Solution {
+
+    // public static void permuter(int[] nums, List<Integer> ds, List<List<Integer>> ans, boolean[] freq) {
+    //     if (ds.size() == nums.length) {
+    //         ans.add(new ArrayList<>(ds));
+    //         return;
+    //     }
+    //     for (int i = 0; i < nums.length; i++) {
+    //         if (!freq[i]) {
+    //             freq[i] = true;
+    //             ds.add(nums[i]);
+    //             permuter(nums, ds, ans, freq);
+    //             ds.remove(ds.size() - 1);
+    //             freq[i] = false;
+    //         }
+    //     }
+    // }
+    // public static List<List<Integer>> permute(int[] nums) {
+    //     List<List<Integer>> ans = new ArrayList<>();
+    //     List<Integer> ds = new ArrayList<>();
+    //     boolean[] freq = new boolean[nums.length];
+    //     permuter(nums, ds, ans, freq);
+    //     return ans;
+    // }
+    // TC: O(N! * N)
+    // SC: O(N) + O(N) + O(N)
+
+    
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         permuter(nums, 0, result);
@@ -24,12 +50,12 @@ public class printAllPossiblePermutations {
             swap(nums, start, i);
         }
     }
+
     public static void swap(int[] nums, int i, int j) {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
     }
-// }
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4};
         List<List<Integer>> result = permute(nums);
