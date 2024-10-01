@@ -31,7 +31,6 @@ public class printAllPossiblePermutations {
     }
 // }
     public static void main(String[] args) {
-        // Solution solution = new Solution();
         int[] nums = {1, 2, 3, 4};
         List<List<Integer>> result = permute(nums);
         System.out.println(result.toString());
