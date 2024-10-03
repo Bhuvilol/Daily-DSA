@@ -1,17 +1,71 @@
 Array
 -------------------------------------------------------------------------------
 Data structure of similar elements of same type.
+Multi-dimensional Arrays
+   int[][] matrix = new int[3][3];  // Creates a 3x3 2D array
+Limitations:
+   - Fixed size: Once created, the size cannot be changed.
+   - Same data type: All elements must be of the same type.
+Advantages:
+   - Fast access time: O(1) for element retrieval given the index.
+   - Memory efficiency: Contiguous memory allocation.
+Common operations:
+   - Iteration: Using loops (for, enhanced for) to traverse elements.
+   - Sorting: Arrays.sort(arr) for ascending order sort.
+   - Searching: Arrays.binarySearch(arr, key) for sorted arrays.
+   - Copying: System.arraycopy() or Arrays.copyOf() methods.
+
+
 
 Array List
 -------------------------------------------------------------------------------
 To create an array list :
 List<Integer> list = new ArrayList<>();
-To add : list.add(10); list.add(20);....
-To add : list = Arrays.asList(10,20,30,....);
-Methods:
-to sort an array - arr : Arrays.sort(arr)
-to sort an array in a fixed index exclusively : Arrays.sort(arr,fromIndex,toIndex);
-to print the array : Arrays.toString(arr)
+
+Popular methods of ArrayList in Java:
+.add(E element): Adds an element to the end of the list.
+.add(int index, E element): Inserts an element at the specified index.
+.get(int index): Returns the element at the specified index.
+.set(int index, E element): Replaces the element at the specified index.
+.remove(int index): Removes the element at the specified index.
+.size(): Returns the number of elements in the list.
+.clear(): Removes all elements from the list.
+.contains(Object o): Returns true if the list contains the specified element.
+.indexOf(Object o): Returns the index of the first occurrence of the specified element.
+.toArray(): Returns an array containing all elements in the list.
+.subList(int fromIndex, int toIndex): Returns a view of the portion of this list.
+.isEmpty(): Returns true if the list contains no elements.
+.addAll(Collection<? extends E> c): Adds all elements in the specified collection to the end of the list.
+.sort(Comparator<? super E> c): Sorts the list according to the order induced by the specified Comparator.
+ 
+
 
 Hashing Technique:
 -------------------------------------------------------------------------------
+Hashmap 
+-------------------------------------------------------------------------------
+HashMap is a data structure in Java that implements the Map interface. It stores key-value pairs and allows for efficient retrieval and insertion of elements.
+1. Key-Value Pairs: Each element in a HashMap consists of a unique key and its associated value.
+2. No Duplicate Keys: Each key can appear only once in the map.
+3. Null Values: HashMap allows null keys (only one) and null values.
+4. Unordered: Elements are not stored in any particular order.
+5. Fast Access: Provides constant-time performance O(1) for basic operations (get and put).
+
+
+Example:
+HashMap<String, Integer> map = new HashMap<>();
+map.put("One", 1);
+map.put("Two", 2);
+int value = map.get("One"); // Returns 1
+
+.put() - to add elements
+.get() - to get elements
+.getOrDefault() - to get the value of the key if it is present, otherwise add the value to the map
+.remove() - to remove elements
+.containsKey() - to check if the key is present
+.containsValue() - to check if the value is present
+.size() - to get the size of the map
+.isEmpty() - to check if the map is empty
+.clear() - to clear the map
+
+
